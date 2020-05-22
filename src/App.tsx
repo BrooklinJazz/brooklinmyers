@@ -4,13 +4,21 @@ import './App.css';
 import { useAppDispatch } from './store';
 import { useSelector } from 'react-redux';
 import { selectContributions } from './store/selectors/git';
+import styled from "styled-components"
+const Container = styled.div`
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+`
 
 function App() {
   const contributions = useSelector(selectContributions)
   return (
-    <div className="App">
+    <Container>
       my contributions {JSON.stringify(contributions)}
-    </div>
+    </Container>
   );
 }
 
