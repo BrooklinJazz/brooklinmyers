@@ -7,10 +7,10 @@
 
 ## Personal Projects
 - Dm Binder
-- Monster Encounter? or am I beyond that now?
-- emo wheel (if we can finish it)
+- Monster Encounter
+- emo wheel
 - stress ball game
-- sending 5e?
+- sending 5e
 - d&d chess [WIP]
 - identicons
 - cards
