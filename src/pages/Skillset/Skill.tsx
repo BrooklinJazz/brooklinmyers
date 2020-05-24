@@ -46,15 +46,23 @@ interface SkillProps {
   list: string[];
 }
 
+const IconArea = styled.div<{gridArea: string}>`
+  grid-area: ${props => props.gridArea};
+  @media (min-width: 800px) {
+    display: flex;
+    justify-content: flex-end;
+  }
+`
+
 export const Skill = ({ icons, area, list }: SkillProps) => {
   // because these skills do not move or update - using index for the key is fine
   return (
     <>
-      <div style={{ gridArea: area + "-icons" }}>
+      <IconArea gridArea={area + "-icons"}>
         {icons.map((Each, i) => (
           <Each key={i} size={30} />
         ))}
-      </div>
+      </IconArea>
       <Area gridArea={area}>
         <List list={list} />
       </Area>
