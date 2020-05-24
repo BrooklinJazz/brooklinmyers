@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { useAppDispatch } from './store';
-import { useSelector } from 'react-redux';
-import { selectContributions } from './store/selectors/git';
-import styled from "styled-components"
-const Container = styled.div`
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-`
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { useAppDispatch } from "./store";
+import { useSelector } from "react-redux";
+import { selectContributions } from "./store/selectors/git";
+import styled from "styled-components";
+
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Home } from "./pages/Home";
+
+
 
 function App() {
-  const contributions = useSelector(selectContributions)
   return (
-    <Container>
-      my contributions {JSON.stringify(contributions)}
-    </Container>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home/>
+          </Route>
+        </Switch>
+      </Router>
   );
 }
 
