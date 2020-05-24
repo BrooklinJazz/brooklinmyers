@@ -5,6 +5,7 @@ import { Code } from "@styled-icons/entypo/Code";
 import { Tools } from "@styled-icons/entypo/Tools";
 import { Text } from "../index";
 import { useHistory } from "react-router";
+import { StyledIcon } from "@styled-icons/styled-icon";
 
 const IconContainer = styled.div`
   display: flex;
@@ -15,8 +16,6 @@ const IconContainer = styled.div`
 `;
 
 // TODO define Icon type
-type Icon = any;
-
 interface TextIconProps {
   Icon: any;
   children: string;
@@ -35,7 +34,7 @@ const TextIcon = ({ Icon, children, testId }: TextIconProps) => {
 
 interface IconData {
   name: string;
-  icon: Icon;
+  icon: StyledIcon;
 }
 
 const icons = [

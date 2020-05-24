@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Links } from "./Links/Links";
-import { Page } from "../Skillset/Page";
+import { Page } from "../../components/Page";
 
 export const Text = styled.h2`
   font-weight: 200;

@@ -1,4 +1,5 @@
 import { get } from "../../helpers";
+import { LinkedinURL, MediumURL, GithubURL } from "../../constants";
 
 context("home", () => {
   beforeEach(() => {
@@ -35,10 +36,11 @@ context("home", () => {
     cy.url().should("include", "philosophy");
   });
 
-  it("contains social media icons", () => {
-    get("Linkedin");
-    get("Medium");
-    get("Github");
+  it("contains working social media icons", () => {
+    get("Linkedin").should('have.prop', 'href', LinkedinURL)
+    get("Medium").should('have.prop', 'href', MediumURL)
+    get("Github").should('have.prop', 'href', GithubURL)
+    // TODO test mail
     get("Mail");
   });
 });
