@@ -34,4 +34,11 @@ context("home", () => {
     get("philosophyIcon").click();
     cy.url().should("include", "philosophy");
   });
+
+  it("contains social media icons", () => {
+    get("Linkedin");
+    get("Medium");
+    get("Github");
+    get("Mail");
+  });
 });

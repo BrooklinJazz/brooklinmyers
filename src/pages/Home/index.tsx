@@ -1,14 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Links } from "./Links/Links";
-const Container = styled.div`
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-`;
+import { Page } from "../Skillset/Page";
 
 export const Text = styled.h2`
   font-weight: 200;
@@ -29,9 +22,9 @@ const Brand = styled.h1.attrs(props => ({
 
 export const Home = () => {
   return (
-    <Container>
+    <Page>
       <Brand />
       <Links />
-    </Container>
+    </Page>
   );
 };
