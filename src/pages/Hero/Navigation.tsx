@@ -4,7 +4,7 @@ import { StyledIconBase } from "@styled-icons/styled-icon";
 import { Code } from "@styled-icons/entypo";
 const NavIconStyleWrapper = styled.div`
   ${StyledIconBase} {
-    height: 3vh;
+    height: 2vw;
     border-radius: 100px;
     padding: 5px;
     color: white;
@@ -16,7 +16,7 @@ const NavIconStyleWrapper = styled.div`
 `;
 
 const NavText = styled.h4`
-  font-size: 2vh;
+  font-size: 1.5vw;
   margin-left: 10px;
 `;
 
