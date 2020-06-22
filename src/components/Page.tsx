@@ -1,21 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { SocialMedia } from "./SocialIcons";
-const PageWrapper = styled.div`
-  display: flex;
+
+export const Page = styled.div`
   height: 100vh;
   width: 100vw;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 `;
-
-// TODO add type for children
-export const Page = ({ children }: { children: any }) => {
-  return (
-    <>
-      <SocialMedia />
-      <PageWrapper>{children}</PageWrapper>
-    </>
-  );
-};
