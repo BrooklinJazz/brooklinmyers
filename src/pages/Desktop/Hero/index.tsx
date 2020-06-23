@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { HeroContent } from "./HeroContent";
-import { Page } from "../../components/Page";
+import { Page } from "../../../components/Page";
 
 const HeroPage = styled(Page)`
   display: flex;

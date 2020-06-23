@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { StyledIconBase } from "@styled-icons/styled-icon";
 import { Code } from "@styled-icons/entypo";
-import { TestIds } from "../../testIds";
-import {NavigationContext} from "../../App"
+import { TestIds } from "../../../testIds";
+import { NavigationContext } from "../DesktopApp";
 
 const NavIconStyleWrapper = styled.div`
   ${StyledIconBase} {

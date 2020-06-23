@@ -1,7 +1,7 @@
 import { TestIds } from "../../src/testIds";
 import { get } from "../helpers";
 
-context("Navigation", () => {
+context("Navigation Desktop", () => {
   beforeEach(() => {
     cy.visit("");
   });

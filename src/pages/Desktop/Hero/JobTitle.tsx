@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { translations } from "../../constants/translations";
+import { translations } from "../../../constants/translations";
 export const JobTitle = styled.h2.attrs((props) => ({
     children: translations.JOB_TITLE,
 }))`

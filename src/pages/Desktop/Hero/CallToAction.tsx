@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { translations } from "../../constants/translations";
+import { translations } from "../../../constants/translations";
 
 export const CallToAction = styled.h3.attrs((props) => ({
     children: translations.CALL_TO_ACTION,

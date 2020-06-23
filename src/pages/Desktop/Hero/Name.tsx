@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { translations } from "../../constants/translations";
+import { translations } from "../../../constants/translations";
 
 export const Name = styled.h1.attrs((props) => ({ children: translations.NAME }))`
   font-size: 2vw;
