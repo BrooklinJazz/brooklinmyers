@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { Hero } from "./Hero";
 import { Page } from "../../components/Page";
 import { TestIds } from "../../testIds";
+
 interface INavigationContext {
   ProjectsRef?: React.MutableRefObject<undefined>;
   PhilosophyRef?: React.MutableRefObject<undefined>;
@@ -20,7 +21,6 @@ export const DesktopApp = () => {
     <NavigationContext.Provider
       value={{ ProjectsRef, PhilosophyRef, SkillsRef, ContactRef }}
     >
-
       <Hero />
       <Page
         ref={ProjectsRef as any}
