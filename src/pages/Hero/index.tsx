@@ -9,6 +9,10 @@ const HeroPage = styled(Page)`
   justify-content: center;
 `
 
+interface IProps {
+  goToProject: () => any;
+}
+
 export const Hero = () => {
   return (
     <HeroPage>

@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { StyledIconBase } from "@styled-icons/styled-icon";
 import { Code } from "@styled-icons/entypo";
+import { TestIds } from "../../testIds";
+import {NavigationContext} from "../../App"
+
 const NavIconStyleWrapper = styled.div`
   ${StyledIconBase} {
     height: 2vw;
@@ -20,9 +23,9 @@ const NavText = styled.h4`
   margin-left: 10px;
 `;
 
-const NavIcon = ({ Icon = Code, content = "" }) => {
+const NavIcon = ({ Icon = Code, content = "", ...rest }) => {
   return (
-    <NavIconStyleWrapper>
+    <NavIconStyleWrapper {...rest}>
       <Icon />
       <NavText>{content}</NavText>
     </NavIconStyleWrapper>
@@ -34,13 +37,16 @@ const NavContainer = styled.div`
   flex-wrap: wrap;
 `;
 
+const scrollToRef = (ref: any) => window.scrollTo(0, ref.current.offsetTop);
+
 export const Navigation = () => {
+  const {ProjectsRef, SkillsRef, ContactRef, PhilosophyRef} = useContext(NavigationContext)
   return (
     <NavContainer>
-      <NavIcon Icon={Code} content={"Projects"} />
-      <NavIcon content={"Philosophy"} />
-      <NavIcon content={"Skills"} />
-      <NavIcon content={"Contact"} />
+      <NavIcon onClick={() => scrollToRef(ProjectsRef)} data-test-id={TestIds.NavigationProjects} Icon={Code} content={"Projects"} />
+      <NavIcon onClick={() => scrollToRef(PhilosophyRef)} data-test-id={TestIds.NavigationPhilosophy} content={"Philosophy"} />
+      <NavIcon onClick={() => scrollToRef(SkillsRef)} data-test-id={TestIds.NavigationSkills} content={"Skills"} />
+      <NavIcon onClick={() => scrollToRef(ContactRef)} data-test-id={TestIds.NavigationContact} content={"Contact"} />
     </NavContainer>
   );
 };
