@@ -1,8 +1,9 @@
 import { useWindowDimensions } from "./useWindowDimensions"
+import {isMobile} from 'react-device-detect';
 
-// consider adding device detect
+
 export const useIsMobile = () => {
     const {width} = useWindowDimensions()
     console.warn(width)
-    return width < 500
+    return width < 450 || isMobile
 }
