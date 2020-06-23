@@ -20,6 +20,7 @@ export const DesktopApp = () => {
     <NavigationContext.Provider
       value={{ ProjectsRef, PhilosophyRef, SkillsRef, ContactRef }}
     >
+
       <Hero />
       <Page
         // @ts-ignore TODO configure typescript to not crash

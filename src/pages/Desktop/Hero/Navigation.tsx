@@ -4,14 +4,11 @@ import { StyledIconBase } from "@styled-icons/styled-icon";
 import { Code } from "@styled-icons/entypo";
 import { TestIds } from "../../../testIds";
 import { NavigationContext } from "../DesktopApp";
+import { CodeIcon } from "../../../components/icons/Icons";
 
 const NavIconStyleWrapper = styled.div`
   ${StyledIconBase} {
     height: 2vw;
-    border-radius: 100px;
-    padding: 5px;
-    color: white;
-    background-color: black;
   }
   display: flex;
   flex: 0 50%;
@@ -23,7 +20,7 @@ const NavText = styled.h4`
   margin-left: 10px;
 `;
 
-const NavIcon = ({ Icon = Code, content = "", ...rest }) => {
+const NavIcon = ({ Icon = CodeIcon, content = "", ...rest }) => {
   return (
     <NavIconStyleWrapper {...rest}>
       <Icon />
@@ -43,7 +40,7 @@ export const Navigation = () => {
   const {ProjectsRef, SkillsRef, ContactRef, PhilosophyRef} = useContext(NavigationContext)
   return (
     <NavContainer>
-      <NavIcon onClick={() => scrollToRef(ProjectsRef)} data-test-id={TestIds.NavigationProjects} Icon={Code} content={"Projects"} />
+      <NavIcon onClick={() => scrollToRef(ProjectsRef)} data-test-id={TestIds.NavigationProjects} content={"Projects"} />
       <NavIcon onClick={() => scrollToRef(PhilosophyRef)} data-test-id={TestIds.NavigationPhilosophy} content={"Philosophy"} />
       <NavIcon onClick={() => scrollToRef(SkillsRef)} data-test-id={TestIds.NavigationSkills} content={"Skills"} />
       <NavIcon onClick={() => scrollToRef(ContactRef)} data-test-id={TestIds.NavigationContact} content={"Contact"} />
