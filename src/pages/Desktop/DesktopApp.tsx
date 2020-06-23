@@ -23,29 +23,25 @@ export const DesktopApp = () => {
 
       <Hero />
       <Page
-        // @ts-ignore TODO configure typescript to not crash
-        ref={ProjectsRef}
+        ref={ProjectsRef as any}
         data-test-id={TestIds.ProjectPage}
       >
         Projects
       </Page>
       <Page
-        // @ts-ignore TODO configure typescript to not crash
-        ref={PhilosophyRef}
+        ref={PhilosophyRef as any}
         data-test-id={TestIds.PhilosophyPage}
       >
         Philosophy
       </Page>
       <Page
-        // @ts-ignore TODO configure typescript to not crash
-        ref={SkillsRef}
+        ref={SkillsRef as any}
         data-test-id={TestIds.SkillsPage}
       >
         Skills
       </Page>
       <Page
-        // @ts-ignore TODO configure typescript to not crash
-        ref={ContactRef}
+        ref={ContactRef as any}
         data-test-id={TestIds.ContactPage}
       >
         Contact
